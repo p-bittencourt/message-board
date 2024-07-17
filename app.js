@@ -6,7 +6,7 @@ const expressLayout = require('express-ejs-layouts');
 
 // routers
 const indexRouter = require('./routes/index');
-const newPostRouter = require('./routes/newpost');
+// const newPostRouter = require('./routes/newpost');
 
 const app = express();
 const port = 3000;
@@ -26,7 +26,7 @@ app.use(express.static('public'));
 
 // routes
 app.use('/', indexRouter);
-app.use('/new', newPostRouter);
+// app.use('/new', newPostRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
