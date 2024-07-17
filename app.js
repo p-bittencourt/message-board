@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // routes
 app.use('/', indexRouter);
-app.use('/newpost', newPostRouter);
+app.use('/new', newPostRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

@@ -1,2 +1,8 @@
 <div class="input-container">Input Container</div>
-<div class="message-display">Message Display</div>
+<div class="message-display">
+  <% messages.forEach(message => { %>
+  <h3><%= message.user %></h3>
+  <p><%= message.text %></p>
+  <p><%= message.added %></p>
+  <% }); %>
+</div>
