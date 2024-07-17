@@ -12,6 +12,76 @@ const messages = [
     user: 'Charles',
     added: new Date(),
   },
+  {
+    text: 'Hi there!',
+    user: 'Amando',
+    added: new Date(),
+  },
+  {
+    text: 'Hello World!',
+    user: 'Charles',
+    added: new Date(),
+  },
+  {
+    text: 'Hi there!',
+    user: 'Amando',
+    added: new Date(),
+  },
+  {
+    text: 'Hello World!',
+    user: 'Charles',
+    added: new Date(),
+  },
+  {
+    text: 'Hi there!',
+    user: 'Amando',
+    added: new Date(),
+  },
+  {
+    text: 'Hello World!',
+    user: 'Charles',
+    added: new Date(),
+  },
+  {
+    text: 'Hi there!',
+    user: 'Amando',
+    added: new Date(),
+  },
+  {
+    text: 'Hello World!',
+    user: 'Charles',
+    added: new Date(),
+  },
+  {
+    text: 'Hi there!',
+    user: 'Amando',
+    added: new Date(),
+  },
+  {
+    text: 'Hello World!',
+    user: 'Charles',
+    added: new Date(),
+  },
+  {
+    text: 'Hi there!',
+    user: 'Amando',
+    added: new Date(),
+  },
+  {
+    text: 'Hello World!',
+    user: 'Charles',
+    added: new Date(),
+  },
+  {
+    text: 'Hi there!',
+    user: 'Amando',
+    added: new Date(),
+  },
+  {
+    text: 'Hello World!',
+    user: 'Charles',
+    added: new Date(),
+  },
 ];
 
 router.get('/', (req, res) => {
