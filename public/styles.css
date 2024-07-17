@@ -6,6 +6,12 @@ body {
   width: 100%;
 }
 
+h1,
+h3,
+p {
+  font-family: 'Raleway', sans-serif;
+}
+
 header {
   align-items: center;
   width: 100%;
@@ -18,6 +24,7 @@ header {
 
 .page-title {
   font-size: 38px;
+  padding-top: 0.4rem;
 }
 
 footer {
@@ -55,6 +62,7 @@ button {
   margin: 0.8rem auto;
   width: 200px;
   padding: 0.275rem;
+  background-color: bisque;
 }
 
 .button-wrappers {
@@ -109,4 +117,35 @@ content styles
   p {
     margin: 0 auto;
   }
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .message-header {
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+
+    h3 {
+      margin: 0.4rem;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.mini {
+  font-size: smaller;
+  font-style: italic;
+}
+
+.message-display {
+  border-bottom: 1px solid #ccc;
 }

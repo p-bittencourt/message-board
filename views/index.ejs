@@ -3,11 +3,13 @@
     <p>Welcome to the Mini Messageboard</p>
     <a href="/new" class="button-wrappers"><button>Add Message</button></a>
   </div>
+  <% messages.forEach(message => { %>
   <div class="message-display">
-    <% messages.forEach(message => { %>
-    <h3><%= message.user %></h3>
+    <div class="message-header">
+      <h3><%= message.user %></h3>
+      <p class="mini"><%= message.added %></p>
+    </div>
     <p><%= message.text %></p>
-    <p><%= message.added %></p>
-    <% }); %>
   </div>
+  <% }); %>
 </div>
