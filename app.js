@@ -1,7 +1,12 @@
 const express = require('express');
 const morgan = require('morgan');
+const createError = require('http-errors');
 const path = require('path');
 const expressLayout = require('express-ejs-layouts');
+
+// routers
+const indexRouter = require('./routes/index');
+const newPostRouter = require('./routes/newpost');
 
 const app = express();
 const port = 3000;
@@ -19,8 +24,12 @@ app.use(express.urlencoded({ extended: false }));
 // connect to database
 
 // routes
-app.get('/', (req, res) => {
-  res.render('index');
+app.use('/', indexRouter);
+app.use('/newpost', newPostRouter);
+
+// catch 404 and forward to error handler
+app.use((req, res, next) => {
+  next(createError(404));
 });
 
 // error handling
