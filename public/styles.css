@@ -1,0 +1,52 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  padding: 0;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 38px;
+}
+
+footer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: bisque;
+  max-height: 40px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 100px;
+  /* margin: 100px auto 10px auto; */
+}
+
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 24px;
+  }
+
+  main {
+    padding-top: 80px;
+  }
+}

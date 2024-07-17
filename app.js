@@ -20,6 +20,7 @@ app.use(expressLayout);
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static('public'));
 
 // connect to database
 
