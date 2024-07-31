@@ -1,16 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const formatter = require('date-format');
 
+// TODO Give dates some treatment to render them more cleanly
 const messages = [
   {
     text: 'Hi there!',
     user: 'Amando',
-    added: new Date(),
+    added: formatter('dd-MM-yyyy hh:mm:ss', new Date()),
   },
   {
     text: 'Hello World!',
     user: 'Charles',
-    added: new Date(),
+    added: formatter('dd-MM-yyyy hh:mm:ss', new Date()),
   },
 ];
 
@@ -26,9 +28,11 @@ router.post('/new', (req, res) => {
   messages.push({
     text: req.body.message,
     user: req.body.name,
-    added: new Date(),
+    added: formatter('dd-MM-yyyy hh:mm:ss', new Date()),
   });
   res.redirect('/');
 });
+
+// TODO Add error handling middleware
 
 module.exports = router;
