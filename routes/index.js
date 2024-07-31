@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const formatter = require('date-format');
 
-// TODO Give dates some treatment to render them more cleanly
 const messages = [
   {
     text: 'Hi there!',
@@ -32,7 +31,5 @@ router.post('/new', (req, res) => {
   });
   res.redirect('/');
 });
-
-// TODO Add error handling middleware
 
 module.exports = router;

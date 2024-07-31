@@ -149,3 +149,13 @@ content styles
 .message-display {
   border-bottom: 1px solid #ccc;
 }
+
+/* 
+Error Page
+*/
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
