@@ -2,14 +2,16 @@ const express = require('express');
 const morgan = require('morgan');
 const createError = require('http-errors');
 const path = require('path');
+const debug = require('debug');
+const compression = require('compression');
+const helmet = require('helmet');
 const expressLayout = require('express-ejs-layouts');
 
 // routers
 const indexRouter = require('./routes/index');
-// const newPostRouter = require('./routes/newpost');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // set up view engine
 app.set('views', path.join(__dirname, 'views'));
@@ -17,6 +19,8 @@ app.set('view engine', 'ejs');
 app.use(expressLayout);
 
 // set up middleware
+app.use(helmet());
+app.use(compression());
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -44,5 +48,5 @@ app.use(function (err, req, res, next) {
 
 // activate
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  debug(`Server running on port ${port}`);
 });
